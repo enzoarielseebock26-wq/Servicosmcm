@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.C.M. Servicios - Soluciones Mineras e Industriales</title>
+    
+    <!-- Fuentes de Google: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --azul-mcm: #0b1d3a;
+            --celeste-mcm: #0099ff;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .bg-mcm { background-color: var(--azul-mcm); }
+        .text-mcm { color: var(--azul-mcm); }
+        
+        /* Botones Mejorados */
+        .btn-mcm { 
+            background-color: var(--celeste-mcm); 
+            color: white; 
+            font-weight: 700; 
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-mcm:hover { 
+            background-color: #007acc; 
+            color: white; 
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 153, 255, 0.4);
+        }
+
+        /* Sección Hero */
+        .hero-section {
+            background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.70)), url('img/hilux.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 140px 0;
+        }
+
+        /* Tarjetas de Servicios y Obras */
+        .item-card {
+            transition: all 0.3s ease;
+            border: none !important;
+            border-bottom: 4px solid transparent !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .item-card:hover {
+            transform: translateY(-8px);
+            border-bottom: 4px solid var(--celeste-mcm) !important;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Contenedor de Imágenes */
+        .img-container {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            padding: 10px;
+        }
+        .img-container-obra {
+            height: 200px;
+            background: #eaeaea;
+            overflow: hidden;
+        }
+        .img-container img, .img-container-obra img {
+            transition: transform 0.3s ease;
+        }
+        .item-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Logos de Clientes */
+        .client-logo-box {
+            height: 100px;
+            transition: all 0.3s ease;
+            background: #fff !important;
+            border: 1px solid #eaeaea;
+        }
+        .client-logo-img {
+            filter: grayscale(100%) opacity(70%);
+            transition: all 0.3s ease;
+            max-height: 60px;
+            object-fit: contain;
+        }
+        .client-logo-box:hover .client-logo-img {
+            filter: grayscale(0%) opacity(100%);
+            transform: scale(1.1);
+        }
+        .client-logo-box:hover {
+            border-color: var(--celeste-mcm);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        /* Listas con check */
+        .check-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        .check-list li i {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--celeste-mcm);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background-color: #0b1d3a; border-bottom: 3px solid #0099ff;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/pans.jpeg" alt="M.C.M. Servicios" width="45" height="40" class="me-3 rounded bg-white p-1 object-fit-contain" onerror="this.style.display='none';">
+                <div>
+                    <h1 class="h6 mb-0 fw-bold text-white" style="letter-spacing: 1px;">M.C.M. SERVICIOS</h1>
+                    <small style="color: #0099ff; font-size: 0.70rem; letter-spacing: 2px; font-weight: 600;">SOLUCIONES MINERAS</small>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center fw-medium">
+                    <li class="nav-item"><a class="nav-link active px-3" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="catalogo">Catálogo de Flota</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-sm btn-outline-info text-white fw-bold px-4 rounded-pill" href="login.jsp">Panel Admin <i class="bi bi-box-arrow-in-right ms-1"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero / Presentación -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bolder mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Soluciones Integrales para la Industria Minera e Industrial</h1>
+            <p class="lead mb-5 mx-auto text-light" style="max-width: 800px; font-weight: 400; line-height: 1.8;">
+                Brindamos servicios confiables junto a aliados estratégicos. Especialistas en equipamiento off-road, módulos habitacionales, camionetas 4x4 y construcción.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#servicios" class="btn btn-mcm btn-lg px-5 py-3 rounded-pill shadow-lg">Conoce Nuestros Servicios</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Nosotros / Quiénes Somos -->
+    <section id="servicios" class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <h2 class="fw-bolder text-mcm mb-4">Compromiso, Calidad y Seguridad en Cada Proyecto</h2>
+                <p class="text-secondary mb-4" style="line-height: 1.8;">
+                    En M.C.M. Servicios sabemos que contar con equipos confiables y servicios de alta calidad es clave para el éxito. Trabajamos para aportar eficiencia, calidad y seguridad operativa en cada proyecto, consolidándonos como su socio estratégico.
+                </p>
+                <ul class="list-unstyled check-list text-secondary">
+                    <li><i class="bi bi-check-circle-fill"></i> <strong class="text-dark">Venta y Alquiler de Módulos Habitacionales:</strong> Versiones Premium, Estándar y Plegables.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong class="text-dark">Alquiler de Camionetas 4x4:</strong> Unidades totalmente equipadas para operaciones mineras.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong class="text-dark">Equipamiento Minero y Off-Road:</strong> Venta de accesorios de seguridad e iluminación.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong class="text-dark">Servicios de Construcción:</strong> Obras para proyectos industriales, mineros y de infraestructura.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> <strong class="text-dark">Soluciones de Importación:</strong> Adaptadas a las necesidades específicas de cada cliente.</li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <div class="p-5 bg-white shadow-lg rounded-4 border-start border-4" style="border-color: #0099ff !important;">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-headset text-mcm" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="fw-bolder text-mcm mb-4 text-center">Contacto Oficial</h4>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-light p-3 rounded-circle me-3">
+                            <i class="bi bi-whatsapp text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <small class="text-muted d-block">Teléfono / WhatsApp</small>
+                            <span class="fw-bold fs-5 text-dark">3835-522470</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-light p-3 rounded-circle me-3">
+                            <i class="bi bi-envelope-at text-primary fs-5"></i>
+                        </div>
+                        <div>
+                            <small class="text-muted d-block">Correo Electrónico</small>
+                            <span class="fw-bold text-dark" style="font-size: 0.9rem;">miguelcardozo@mcm-servicios.com</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="text-center text-secondary small mb-0 mt-3">Trabajando junto a la minería y la industria regional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Servicios de Construcción -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: rgba(0, 153, 255, 0.1); color: #0099ff;">OBRAS Y DESARROLLO</span>
+                <h2 class="fw-bolder text-mcm">Servicio de Construcción Institucional, Público y Deportivo</h2>
+                <p class="text-muted mt-2 mx-auto" style="max-width: 800px;">Contamos con un equipo de construcción debidamente capacitado para llevar a cabo obras de diversas índoles, respaldado por un equipamiento adecuado y una logística eficiente.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Obra 1 -->
+                <div class="col-md-4">
+                    <div class="card item-card bg-light h-100 p-0 text-center">
+                        <div class="img-container-obra d-flex align-items-center justify-content-center">
+                            <img src="img/obra_ferrocarril.png" class="w-100 h-100 object-fit-cover" alt="Club Ferrocarril" onerror="this.outerHTML='<i class=\'bi bi-building text-secondary\' style=\'font-size: 4rem;\'></i>';">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-mcm">Club Ferrocarril (Andalgalá)</h5>
+                            <p class="text-muted small mt-2 mb-0">Realización de tribunas para la cancha, reparación y colocación de alambrado olímpico, reparación de postes, divisiones y pintura.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Obra 2 -->
+                <div class="col-md-4">
+                    <div class="card item-card bg-light h-100 p-0 text-center">
+                        <div class="img-container-obra d-flex align-items-center justify-content-center">
+                            <img src="img/obra_jardin.png" class="w-100 h-100 object-fit-cover" alt="Jardín de Infantes" onerror="this.outerHTML='<i class=\'bi bi-house-door text-secondary\' style=\'font-size: 4rem;\'></i>';">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-mcm">Jardín de Infantes (Andalgalá)</h5>
+                            <p class="text-muted small mt-2 mb-0">Realización integral de una sala de computación con infraestructura completa para la institución educativa.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Obra 3 -->
+                <div class="col-md-4">
+                    <div class="card item-card bg-light h-100 p-0 text-center">
+                        <div class="img-container-obra d-flex align-items-center justify-content-center">
+                            <img src="img/obra_tiro.png" class="w-100 h-100 object-fit-cover" alt="Club Tiro Federal" onerror="this.outerHTML='<i class=\'bi bi-hammer text-secondary\' style=\'font-size: 4rem;\'></i>';">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-mcm">Club Tiro Federal (Andalgalá)</h5>
+                            <p class="text-muted small mt-2 mb-0">Instalación de bases para butacas, construcción de tapia perimetral y reparación completa de techo por filtraciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Módulos Habitacionales -->
+    <section class="py-5" style="background-color: #f1f4f8;">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: rgba(0, 153, 255, 0.1); color: #0099ff;">NUESTROS ESPACIOS</span>
+                <h2 class="fw-bolder text-mcm">Módulos Habitacionales</h2>
+                <p class="text-muted mt-2">Estructuras completamente equipadas para oficinas, espacios residenciales y baños.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4"><div class="card item-card bg-white h-100 p-4 text-center"><div class="img-container"><img src="img/modulo1.png" class="img-fluid object-fit-contain" style="max-height: 120px;" alt="Módulo 1" onerror="this.src='img/pans.jpeg';"></div><h5 class="fw-bold text-mcm mt-3">Módulo Habitacional 1</h5><p class="text-muted small mt-2 mb-0">Versión optimizada para campamentos mineros y habitabilidad inmediata.</p></div></div>
+                <div class="col-md-4"><div class="card item-card bg-white h-100 p-4 text-center"><div class="img-container"><img src="img/modulo2.png" class="img-fluid object-fit-contain" style="max-height: 120px;" alt="Módulo 2" onerror="this.src='img/pans.jpeg';"></div><h5 class="fw-bold text-mcm mt-3">Módulo Habitacional 2</h5><p class="text-muted small mt-2 mb-0">Diseño modular de alta resistencia, climatizado y adaptable a la faena.</p></div></div>
+                <div class="col-md-4"><div class="card item-card bg-white h-100 p-4 text-center"><div class="img-container"><img src="img/modulo3.png" class="img-fluid object-fit-contain" style="max-height: 120px;" alt="Módulo 3" onerror="this.src='img/pans.jpeg';"></div><h5 class="fw-bold text-mcm mt-3">Módulo Habitacional 3</h5><p class="text-muted small mt-2 mb-0">Configuración ejecutiva / sanitaria con acabados de primera calidad.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventario Completo de Equipamiento Minero -->
+    <section class="py-5 bg-white border-top">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: rgba(11, 29, 58, 0.1); color: #0b1d3a;">SEGURIDAD EXTREMA</span>
+                <h2 class="fw-bolder text-mcm">Equipamiento para Vehículos 4x4</h2>
+                <p class="text-muted mt-2">Inventario completo de elementos e insumos certificados para alta exigencia minera.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/MATAFUEGO.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Matafuego" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Matafuego / Extintor 5kg</h6><p class="small text-muted mb-0">Base de polvo químico ABC aprobado para faena.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/JAULA EXTERNA.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Jaula Externa" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Jaulas Antivuelco Mineras</h6><p class="small text-muted mb-0">Modelos internos 4 puntos y externas equipadas.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/BARRA DE LED RECTA.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Barra LED" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Barras y Faros LED</h6><p class="small text-muted mb-0">Barra LED recta universal 180W y faros auxiliares.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/LUZ DE EMERGENCIA.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Luz Emergencia" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Luz de Emergencia LED</h6><p class="small text-muted mb-0">Giratoria color ámbar con enchufe a encendedor.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/SIRENA DE RETROCESO.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Sirena" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Sirena de Retroceso</h6><p class="small text-muted mb-0">Alerta sonora robusta para maniobras en campamento.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/CHECK POINT.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Check Point" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Check Point N° 19 y 21</h6><p class="small text-muted mb-0">Indicadores visuales de estado de tuercas de ruedas.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/KIT ANTIDERRA ME ZK2.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Antiderrama" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Kit Antiderrama ME ZK2</h6><p class="small text-muted mb-0">Set completo con 7 artículos de control ambiental.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/HUELLA DE TRACCION PARA NIEVE.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Huella" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Huella de Tracción</h6><p class="small text-muted mb-0">Para nieve, barro y arena (60x18x1.25 cm).</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/LINGAS DE REMOLQUE.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Lingas" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Lingas y Eslingas</h6><p class="small text-muted mb-0">Lingas de remolque hasta 3 toneladas (9m).</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/GATO HIDR.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Gato" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Gato Hidráulico Lüsqtoff</h6><p class="small text-muted mb-0">Modelo carrito reforzado de 3 toneladas.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/CUBIERTAS PIRELLI.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Cubiertas" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Cubiertas Pirelli ATR</h6><p class="small text-muted mb-0">Neumáticos medida 265/65/X17 de alta durabilidad.</p></div></div>
+                <div class="col"><div class="p-4 bg-white border item-card h-100 text-center"><div class="img-container mb-3"><img src="img/CHAPON PROTECTOR.png" class="img-fluid object-fit-contain" style="max-height: 90px;" alt="Chapón" onerror="this.style.display='none';"></div><h6 class="fw-bold text-dark mb-2">Chapón y Guardafangos</h6><p class="small text-muted mb-0">Protector de tanque de combustible Bracco y lamas.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes y Aliados Estratégicos -->
+    <section class="py-5 border-top border-bottom" style="background-color: #ffffff;">
+        <div class="container text-center py-4">
+            <h3 class="fw-bolder text-mcm mb-2">Alianzas y Clientes que Potencian a M.C.M. Servicios</h3>
+            <p class="text-muted mb-5">Empresas y proyectos de gran envergadura que respaldan nuestra labor.</p>
+            
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 align-items-center justify-content-center">
+                
+                <!-- Alianzas M.C.M. Servicios -->
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/intakt.png" alt="Intakt" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Intakt</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/pyg.png" alt="PyG Servicios" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>PyG Servicios</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/dorado.png" alt="Dorado" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Dorado</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/experta.png" alt="Experta Seguros" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Experta Seguros</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/premium.png" alt="Premium Security Service" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Premium Security Service</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/assa.png" alt="Assa Group" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Assa Group</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/grupol.png" alt="Grupo L" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Grupo L</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/mafap.png" alt="Mafap Security Service" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Mafap Security Service</span>';"></div></div>
+
+                <!-- Clientes y Operadoras Mineras -->
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/mara.png" alt="MARA" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>MARA</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/glencore.png" alt="Glencore" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Glencore</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/ausenco.png" alt="Ausenco" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Ausenco</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/fortini.png" alt="Electromecánica Fortini" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Electromecánica Fortini</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/huasi.png" alt="Huasi Construcciones" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Huasi Construcciones</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/foraco.png" alt="Foraco" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Foraco</span>';"></div></div>
+                
+                <!-- Otras Mineras -->
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/rio_tinto.png" alt="Rio Tinto" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Rio Tinto</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/galaxy.png" alt="Galaxy" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>GALAXY</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/agua_rica.png" alt="Minera Agua Rica" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Minera Agua Rica</span>';"></div></div>
+                <div class="col"><div class="rounded client-logo-box d-flex align-items-center justify-content-center px-3"><img src="img/antofagasta.png" alt="Antofagasta Minerals" class="img-fluid client-logo-img" onerror="this.outerHTML='<span class=\'fw-bold text-dark\'>Antofagasta Minerals</span>';"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-mcm text-white py-5 text-center">
+        <div class="container">
+            <h5 class="mb-3 fw-bold" style="letter-spacing: 1px;">M.C.M. SERVICIOS S.A.</h5>
+            <p class="text-white-50 mb-4">Soluciones Mineras e Industriales integrales de primer nivel.</p>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white text-decoration-none"><i class="bi bi-telephone me-2"></i> 3835-522470</a>
+                <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> miguelcardozo@mcm-servicios.com</a>
+            </div>
+            <hr class="border-secondary opacity-50 mb-4">
+            <p class="small text-white-50 mb-0">&copy; 2026 M.C.M. Servicios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
